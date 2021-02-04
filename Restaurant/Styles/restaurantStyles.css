@@ -1,0 +1,75 @@
+/*
+Name: Andrei Bila
+Date submitted: Feb 4, 2021
+Project: Restaurant Site
+*/
+
+/* Style for the body */
+body{
+    background-color: #f2efea;
+    margin: 0 auto;
+    font-family: Times, helvetica;
+    color: #091620;
+    font-size: 18px;
+}
+
+#Main{
+  margin:0 auto;
+  margin-bottom: 100px;
+  padding: 0;
+  width: 95%;
+  max-width: 100%;
+
+}
+
+/* applying background color to header and footer*/
+#Pagetop,footer{
+  background-color: #9ae4e0;
+  padding: 0;
+}
+
+/* styling header and nav */
+header{
+  font-family: serif, arial;
+  text-align: center;
+}
+
+header h1{
+  font-size: 60px;
+}
+
+nav {
+  border-top: 1px #091620 solid;
+  border-bottom: 1px #091620 solid;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+/* styling footer*/
+footer {
+  border-top: 1px #091620 solid;
+  margin-top: 5px;
+  text-align: center;
+  bottom: 0px;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+}
+
+/*Styling page link buttons*/
+nav .btn{
+  background-color: #403d58;
+  border: thin #403d58 solid;
+  color:#f2efea;
+}
+
+nav #CurrentPage{
+  font-style: italic;
+  color: #9ae4e0;
+}
+
+nav .btn:hover{
+  background-color: #f2efea;
+  border: thin #403d58 solid;
+  color: #403d58;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+Name: Andrei Bila
+Date submitted: Feb 4, 2021
+Project: Restaurant Site
+-->
+<html lang="en">
+  <head>
+    <!-- meta and stylesheet links-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+
+    <!-- css style sheets link -->
+    <link href="Styles\restaurantStyles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    <!-- title of the page-->
+    <title>Contact Us</title>
+
+    <style>
+      .requiredInput{
+        font-weight: bold;
+      }
+      form label{
+        text-align: center;
+      }
+      form, div .row{
+        margin: 3px;
+        padding: 5px;
+      }
+      form .btn{
+          background-color: #403d58;
+          border: thin black solid;
+          color:#f2efea;
+      }
+      form .btn:hover{
+        background-color: #f2efea;
+        border: thin black solid;
+        color: #403d58;
+      }
+      textarea.form-control{
+        height: 200px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="Pagetop">
+      <!-- Heading of the page -->
+      <header>
+        <h1> Dave's Favourites </h1>
+      </header>
+
+      <!--Navigation for webpage -->
+      <nav>
+        <a class="btn badge-pill" href="HomePage.html"><i class="fas fa-home"></i></a>
+        <a class="btn badge-pill" href="Menu.html">Menu</a>
+        <a Id="CurrentPage" class="btn badge-pill" href="ContactUs.html">Contact Us</a>
+      </nav>
+    </div>
+
+    <!--Reminder to user to enable JavaScript -->
+    <noscript>For the best experience with this website, please enable JavaScript!</noscript>
+
+    <!-- Main section of the webpage -->
+    <div id="Main" class="container">
+      <form name="contactUsForm" class="needs-validation"
+        onsubmit="return checkForm();" onreset="resetView();" novalidate>
+
+        <!-- name input -->
+        <div class="from-group row">
+          <label for="Name" class="col-lg-4 col-md-6 col-sm-12 requiredInput">Name:</label>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <input class="form-control" type="text" name="Name" id="Name" required>
+            <div class="invalid-feedback">
+              Please enter your name.
+            </div>
+          </div>
+        </div>
+
+        <!-- email input -->
+        <div class="from-group row">
+          <label for="Email" class="col-lg-4 col-md-6 col-sm-12 requiredInput">Email:</label>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <input type="email" class="form-control" name="Email" id="Email" required>
+            <div class="invalid-feedback">
+              Please enter a valid E-mail address.
+            </div>
+          </div>
+        </div>
+
+        <!-- phone input -->
+        <div class="from-group row">
+          <label for="Phone" class="col-lg-4 col-md-6 col-sm-12 requiredInput">Phone:</label>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <input type="text" pattern="[0-9]{7,}" class="form-control" name="Phone" id="Phone" required>
+            <div class="invalid-feedback">
+              Please enter a valid phone number.
+            </div>
+          </div>
+        </div>
+
+        <!-- reasons input -->
+        <div class="from-group row">
+          <label for="Reason" class="col-lg-4 col-md-6 col-sm-12">Reason for Inquiry:</label>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <select  class="form-control" name="Reasons" id="Reasons">
+              <option value="Catering" selected>Catering</option>
+              <option value="PrivateParty">Private party</option>
+              <option value="Feedback">Feedback</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- additional information input -->
+        <div class="from-group row">
+          <label for="Info" class="col-lg-4 col-md-6 col-sm-12">Additional Information:</label>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <textarea name="Info" class="form-control" id="Info"></textarea>
+          </div>
+        </div>
+
+        <!-- visited information input -->
+        <div class="from-group row">
+          <label for="Visit" class="col-lg-4 col-md-6 col-sm-12">Have you been to the restaurant?</label>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Visited" id="No" value="No" checked>
+              <label class="form-check-label" for="No">No</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Visited" id="Yes" value="Yes">
+              <label class="form-check-label" for="Yes">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- contact day input -->
+        <div class="from-group row">
+          <label for="Day" class="col-lg-4 col-md-6 col-sm-12">Best day to contact you:</label>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" name="Day" value="M" id="M" />
+              <label class="form-check-label" for="M">M</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" name="Day" value="T" id="T" />
+              <label class="form-check-label" for="T">T</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" name="Day" value="W" id="W" />
+              <label class="form-check-label" for="W">W</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" name="Day" value="Th" id="Th" />
+              <label class="form-check-label" for="Th">Th</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" name="Day" value="F" id="F" />
+              <label class="form-check-label" for="F">F</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- submit and reset buttons -->
+        <div class="form-group row">
+          <div class="col text-center">
+            <button type="submit" id="sendForm" class="btn">Send Request</button>
+            <button type="reset" id="newForm" style="display: none" class="btn">New Request Form</button>
+          </div>
+        </div>
+      </form> <!-- end Form-->
+    </div>
+
+    <!-- Links to js scripts -->
+    <script src="Scripts\contactUsFormCheck.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+
+    <!-- Footer of the webpage -->
+    <footer>
+      <p>15 Uppington Street, London, LDN 123</p>
+      <p>+44 7911 123456</p>
+    </footer>
+
+  </body>
+</html>
